@@ -6,6 +6,7 @@
     <resultMap type="com.example.entity.car" id="carMap">
         <id column="ID" property="id"/>
         <result column="NAME" property="name"/>
+        <result column="PASSENGERS" property="passengers"/>
     </resultMap>
 
     <select id="findAll" resultMap="carMap">
