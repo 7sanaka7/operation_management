@@ -12,6 +12,10 @@ public interface CarMapper {
 	public List<Car> findAll();
 	
 	public void insert(Car car);
+	
+	public Car findById(Integer id);
+	
+	public void update(Car car);
 }
 
 
