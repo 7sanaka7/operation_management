@@ -10,6 +10,8 @@ import com.example.entity.Car;
 public interface CarMapper {
 
 	public List<Car> findAll();
+	
+	public void insert(Car car);
 }
 
 
