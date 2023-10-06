@@ -3,7 +3,7 @@
 	PUBLIC  "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.mapper.CarMapper">
-    <resultMap type="com.example.entity.car" id="carMap">
+    <resultMap type="com.example.entity.Car" id="carMap">
         <id column="ID" property="id"/>
         <result column="NAME" property="name"/>
         <result column="PASSENGERS" property="passengers"/>
