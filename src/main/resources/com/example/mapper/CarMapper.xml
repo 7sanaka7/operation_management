@@ -11,6 +11,17 @@
 
     <select id="findAll" resultMap="carMap">
         SELECT * FROM CARS
+        <where>
+        <if test="id != null">
+        ID = #{id}
+        </if>
+        <if test="name != null">
+        	OR NAME = #{name}
+        	</if>
+        	<if test="passengers">
+        	OR PASSENGERS = #{passengers}
+        	</if>
+        </where>
     </select>
     
     <insert id="insert" useGeneratedKeys="true" keyColumn="ID" keyProperty="id">
@@ -24,4 +35,9 @@
  	<select id="update">
  		UPDATE CARS SET NAME = #{name}, PASSENGERS = #{passengers} WHERE ID = #{id}
  	</select>
+ 	
+ 	
+ 	<delete id="deleteById">
+ 		DELETE FROM CARS WHERE ID = #{id}
+ 	</delete>
 </mapper>

@@ -18,11 +18,11 @@ public class CarService {
 		this.carMapper = carMapper;
 	}
 	
-	public List<Car> findAll(){
-		return this.carMapper.findAll();
+	public List<Car> findAll(Integer id, String name, Integer passengers){
+		return this.carMapper.findAll(id, name, passengers);
 	}
 	
-	public void insert(String name,Integer passengers) {
+	public void insert(String name, Integer passengers) {
 		Car car = new Car();
 		car.setName(name);
 		car.setPassengers(passengers);
@@ -40,5 +40,11 @@ public class CarService {
 			car.setPassengers(passengers);
 			this.carMapper.update(car);
 		  }
+	
+	public void deleteById(Integer id) {
+		this.carMapper.deleteById(id);
+	}
+	
+	
 
 }
